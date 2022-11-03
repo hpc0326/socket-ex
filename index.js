@@ -9,17 +9,17 @@ const port = process.env.PORT || 3000;
 server.listen(port, () => {
   console.log('Server listening at port %d', port);
 });
-
+console.log('up')
 // Routing
 app.use(express.static(path.join(__dirname, 'public')));
-
+console.log('middle')
 app.get('/', function(req, res){
   res.render('./public/index.html');
 });
 // Chatroom
 
 let numUsers = 0;
-
+console.log('down')
 io.on('connection', (socket) => {
   let addedUser = false;
 
