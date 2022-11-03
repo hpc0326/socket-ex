@@ -14,7 +14,7 @@ server.listen(port, () => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){
-  res.render('/public/index.html');
+  res.render('/index.html');
 });
 // Chatroom
 
